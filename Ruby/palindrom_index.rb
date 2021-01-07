@@ -1,6 +1,6 @@
 def palindromeIndex(s, temp_store = {})
   #Check if string is a palindrome or has no solution
-  return -1 if is_palindrome(s) || s.chars.length == s.chars.uniq.length
+  return -1 if is_palindrome(s) || s.length == s.chars.uniq.length
 
   # Determine the characters to remove
   ptr_l = 0
