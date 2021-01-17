@@ -2,7 +2,6 @@
 
 require_relative '../lib/linked_list'
 require_relative '../lib/node'
-# require_relative '../bin/main'
 
 describe LinkedList do
   node1 = Node.new('gango')
