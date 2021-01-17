@@ -21,6 +21,6 @@ node7.next_node = node8
 node9 = Node.new('madera')
 node8.next_node = node9
 list = LinkedList.new(node1)
-p list.find_length
-p list.index_of('Gambino')
-p list.read(7)
+# p list.find_length
+# p list.index_of('Gambino')
+# p list.read(7)
