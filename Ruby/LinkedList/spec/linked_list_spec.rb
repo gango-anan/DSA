@@ -23,7 +23,7 @@ describe LinkedList do
   node8.next_node = node9
   list = LinkedList.new(node1)
 
-  describe 'read' do
+  describe '#read' do
     it 'returns the value at a specified index' do
       expect(list.read(3)).to eql('ananiya')
     end
@@ -33,7 +33,7 @@ describe LinkedList do
     end
   end
 
-  describe 'index_of' do
+  describe '#index_of' do
     it 'returns the index of the specified element in the list' do
       expect(list.index_of('ananiya')).to eql(3)
     end
