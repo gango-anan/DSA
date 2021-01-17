@@ -33,4 +33,14 @@ describe LinkedList do
       expect(list.read(20)).to eql(nil)
     end
   end
+
+  describe 'index_of' do
+    it 'returns the index of the specified element in the list' do
+      expect(list.index_of('ananiya')).to eql(3)
+    end
+
+    it 'returns nil if the specified element is not in the list' do
+      expect(list.index_of('aan')).to eql(nil)
+    end
+  end
 end
