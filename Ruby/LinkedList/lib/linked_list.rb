@@ -33,7 +33,7 @@ class LinkedList
 
   end
 
-#Insert at a particular point in the LinkedList
+# Insert at a particular point in the LinkedList
   def insert_at_index(index, value)
     new_node = Node.new(value)
     if index == 0
@@ -49,5 +49,20 @@ class LinkedList
       new_node.next_node = current_node.next_node
       current_node.next_node = new_node
     end
+  end
+
+# Delete element from the LinkedList
+  def delete_at_index(index)
+    if index == 0
+      self.first_node = first_node.next_node
+    else
+      current_node = first_node
+      current_index = 0
+      while current_index < (index - 1)
+        current_node = current_node.next_node
+        current_index += 1
+      end
+      node_after_deleted_node = current_node.next_node.next_node
+      current_node.next_node = node_after_deleted_node
   end
 end
