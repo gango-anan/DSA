@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# LinkedList class
 class LinkedList
   attr_accessor :first_node
 
@@ -5,7 +8,7 @@ class LinkedList
     @first_node = first_node
   end
 
-# Reading from LinkedList
+  # Reading from LinkedList
   def read(index)
     current_node = first_node
     current_index = 0
@@ -16,33 +19,33 @@ class LinkedList
 
       return nil unless current_node
     end
-    return current_node.data
+    current_node.data
   end
 
-# Searching from LinkedList
+  # Searching from LinkedList
   def index_of(value)
     current_node = first_node
     current_index = 0
     while current_node
       return current_index if current_node.data == value
-      
+
       current_node = current_node.next_node
       current_index += 1
     end
-    return nil
-
+    nil
   end
 
-# Insert at a particular point in the LinkedList
+  # Insert at a particular point in the LinkedList
   def insert_at_index(index, value)
     new_node = Node.new(value)
-    if index == 0
+    # if index == 0
+    if index.zero?
       new_node.next_node = first_node
       self.first_node = new_node
     else
       current_node = first_node
       current_index = 0
-      while current_index < (index-1)
+      while current_index < (index - 1)
         current_node = current_node.next_node
         current_index += 1
       end
@@ -51,9 +54,10 @@ class LinkedList
     end
   end
 
-# Delete element from the LinkedList
+  # Delete element from the LinkedList
   def delete_at_index(index)
-    if index == 0
+    # if index == 0
+    if index.zero?
       self.first_node = first_node.next_node
     else
       current_node = first_node
@@ -64,5 +68,17 @@ class LinkedList
       end
       node_after_deleted_node = current_node.next_node.next_node
       current_node.next_node = node_after_deleted_node
+    end
+  end
+
+  # length of list
+  def find_length
+    current_node = first_node
+    count = 0
+    while current_node
+      count += 1
+      current_node = current_node.next_node
+    end
+    count
   end
 end
