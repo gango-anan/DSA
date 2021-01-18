@@ -22,8 +22,7 @@ end
 
 # Palindrome
 def is_palindrome(s)
-  return false unless s == s.reverse
-  true
+  s == s.reverse
 end
 
 # Test Cases
