@@ -9,7 +9,7 @@ describe 'Query Hash' do
     @hash = { name: 'Gango', email: 'gango@galisoft.com' }
   end
 
-  it 'properly retrieves a value giveb a key' do
+  it 'properly retrieves a value given a key' do
     expect(query_hash @hash, :name).to eql('Gango')
   end
 

@@ -28,7 +28,7 @@ describe LinkedList do
       expect(list.read(3)).to eql('ananiya')
     end
 
-    context 'when the specified index is out of range'
+    context 'when the specified index is out of range' do
       it 'returns nil' do
         expect(list.read(20)).to eql(nil)
       end

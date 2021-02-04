@@ -16,8 +16,8 @@ class LinkedList
     while current_index < index
       current_node = current_node.next_node
       current_index += 1
-
       return nil unless current_node
+
     end
     current_node.data
   end
@@ -35,10 +35,9 @@ class LinkedList
     nil
   end
 
-  # Insert at a particular point in the LinkedList
+  # Insert a value at a particular point in the LinkedList
   def insert_at_index(index, value)
     new_node = Node.new(value)
-    # if index == 0
     if index.zero?
       new_node.next_node = first_node
       self.first_node = new_node
@@ -56,7 +55,6 @@ class LinkedList
 
   # Delete element from the LinkedList
   def delete_at_index(index)
-    # if index == 0
     if index.zero?
       self.first_node = first_node.next_node
     else
